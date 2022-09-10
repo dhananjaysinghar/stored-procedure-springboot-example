@@ -1,0 +1,18 @@
+# stored-procedure-springboot-example
+
+
+~~~
+CREATE PROCEDURE in SQL DB
+
+CREATE PROCEDURE FIND_USER_BY_ID(IN id INT)
+BEGIN
+SELECT * FROM USER WHERE USER_ID = id;
+END
+
+
+CREATE PROCEDURE COUNT_USER_BY_ADDRESS(IN user_addr VARCHAR(30), OUT count_out INT)
+BEGIN
+SELECT COUNT(*) into count_out from USER WHERE USER_ADDRESS = user_addr;
+END
+
+~~~
